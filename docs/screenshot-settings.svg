@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="wall2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#241a44"/>
+      <stop offset="0.55" stop-color="#4c1d95"/>
+      <stop offset="1" stop-color="#6d28d9"/>
+    </linearGradient>
+    <radialGradient id="glow2" cx="0.2" cy="0.1" r="0.7">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gem2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ede9fe"/><stop offset="1" stop-color="#c4b5fd"/>
+    </linearGradient>
+    <filter id="panelShadow2" x="-25%" y="-20%" width="150%" height="140%">
+      <feDropShadow dx="0" dy="26" stdDeviation="34" flood-color="#0d0524" flood-opacity="0.55"/>
+    </filter>
+    <filter id="softBlur2" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="60"/>
+    </filter>
+    <clipPath id="panelClip2"><rect x="290" y="96" width="620" height="1030" rx="26"/></clipPath>
+  </defs>
+
+  <!-- wallpaper -->
+  <rect width="1200" height="1200" fill="url(#wall2)"/>
+  <circle cx="960" cy="1020" r="250" fill="#7c3aed" opacity="0.4" filter="url(#softBlur2)"/>
+  <circle cx="240" cy="180" r="220" fill="#c4b5fd" opacity="0.28" filter="url(#softBlur2)"/>
+  <rect width="1200" height="1200" fill="url(#glow2)"/>
+
+  <!-- menu bar -->
+  <rect x="0" y="0" width="1200" height="52" fill="#120a26" opacity="0.5"/>
+  <text x="24" y="33" font-size="17" font-weight="700" fill="#ffffff" opacity="0.92">Obsidian</text>
+  <text x="118" y="33" font-size="16" fill="#ffffff" opacity="0.7">File  Edit  View</text>
+  <text x="1176" y="33" font-size="16" fill="#ffffff" opacity="0.85" text-anchor="end">Thu Jul 10&#160;&#160;9:41</text>
+  <rect x="988" y="20" width="26" height="13" rx="3" fill="none" stroke="#ffffff" stroke-opacity="0.8" stroke-width="1.5"/>
+  <rect x="990" y="22" width="17" height="9" rx="1.5" fill="#ffffff" opacity="0.85"/>
+  <rect x="1015" y="23.5" width="2.5" height="6" rx="1" fill="#ffffff" opacity="0.8"/>
+  <rect x="780" y="6" width="40" height="40" rx="9" fill="#ffffff" opacity="0.22"/>
+  <g transform="translate(800,26)">
+    <path d="M0,-13 L11,-3 L7,12 L-7,12 L-11,-3 Z" fill="url(#gem2)"/>
+    <path d="M0,-13 L0,12 M-11,-3 L11,-3" stroke="#6d28d9" stroke-opacity="0.55" stroke-width="1.3"/>
+    <path d="M-5,1 L5,1 M-4,5 L4,5" stroke="#6d28d9" stroke-opacity="0.5" stroke-width="1.3"/>
+  </g>
+  <path d="M800,77 L782,97 L818,97 Z" fill="#241f38"/>
+
+  <!-- ===== PANEL (dark) ===== -->
+  <rect x="290" y="96" width="620" height="1030" rx="26" fill="#201b30" filter="url(#panelShadow2)"/>
+  <g clip-path="url(#panelClip2)">
+    <!-- header, dimmed -->
+    <rect x="290" y="96" width="620" height="86" fill="#7c3aed" opacity="0.16"/>
+    <text x="322" y="147" font-size="24" opacity="0.7">📅</text>
+    <text x="356" y="146" font-size="20" font-weight="700" fill="#efedf8" opacity="0.75">2026-07-10</text>
+    <g transform="translate(505,130)" fill="#c9c4e0" opacity="0.45" font-size="15" font-weight="700" text-anchor="middle">
+      <text x="12" y="20">B</text><text x="46" y="20" font-style="italic" font-weight="400">I</text>
+      <text x="80" y="20" font-weight="400" text-decoration="underline">U</text>
+      <text x="114" y="20" font-weight="400" text-decoration="line-through">S</text>
+    </g>
+    <g fill="#a49ec4" opacity="0.6"><circle cx="862" cy="139" r="2.6"/><circle cx="872" cy="139" r="2.6"/><circle cx="882" cy="139" r="2.6"/></g>
+
+    <!-- receded editor preview -->
+    <g opacity="0.32" fill="#efedf8">
+      <text x="322" y="228" font-size="22" font-weight="800">Thursday · Jul 10</text>
+      <rect x="322" y="252" width="21" height="20" rx="5" fill="none" stroke="#efedf8" stroke-width="2"/>
+      <text x="356" y="269" font-size="17">Ship the Notesidian README</text>
+      <rect x="322" y="286" width="21" height="20" rx="5" fill="none" stroke="#efedf8" stroke-width="2"/>
+      <text x="356" y="303" font-size="17">Review the open pull requests</text>
+    </g>
+
+    <!-- Font row (bottom bar, replaces tabs) -->
+    <rect x="290" y="352" width="620" height="86" fill="#2a2440"/>
+    <line x1="290" y1="352" x2="910" y2="352" stroke="#ffffff" stroke-opacity="0.06"/>
+    <text x="322" y="402" font-size="17" fill="#b7b1d4">Font</text>
+    <rect x="380" y="378" width="238" height="38" rx="9" fill="#181427" stroke="#ffffff" stroke-opacity="0.08"/>
+    <text x="398" y="403" font-size="18" fill="#efedf8" font-family="Iowan Old Style, Georgia, 'Times New Roman', serif">Iowan Old Style</text>
+    <path d="M600,392 l6,7 l6,-7" fill="none" stroke="#b7b1d4" stroke-width="1.8" stroke-linecap="round"/>
+    <rect x="628" y="378" width="80" height="38" rx="9" fill="#181427" stroke="#ffffff" stroke-opacity="0.08"/>
+    <text x="646" y="403" font-size="17" fill="#efedf8">16</text>
+    <path d="M688,392 l6,7 l6,-7" fill="none" stroke="#b7b1d4" stroke-width="1.8" stroke-linecap="round"/>
+    <!-- active gear -->
+    <rect x="844" y="375" width="44" height="44" rx="11" fill="#7c3aed" opacity="0.9"/>
+    <g transform="translate(866,397)" fill="none" stroke="#ffffff" stroke-width="2.4">
+      <circle cx="0" cy="0" r="6.5"/>
+      <g stroke-linecap="round">
+        <path d="M0,-13 L0,-9 M0,9 L0,13 M-13,0 L-9,0 M9,0 L13,0"/>
+        <path d="M-9.2,-9.2 L-6.4,-6.4 M9.2,9.2 L6.4,6.4 M9.2,-9.2 L6.4,-6.4 M-9.2,9.2 L-6.4,6.4"/>
+      </g>
+    </g>
+
+    <!-- ===== settings groups ===== -->
+    <!-- EDITOR -->
+    <text x="322" y="492" font-size="13" font-weight="700" fill="#8f88b3" letter-spacing="1.5">EDITOR</text>
+    <text x="322" y="528" font-size="18" fill="#e9e7f5">Add ✅ date on done</text>
+    <rect x="812" y="512" width="48" height="27" rx="13.5" fill="#7c3aed"/>
+    <circle cx="847" cy="525.5" r="10.5" fill="#ffffff"/>
+
+    <line x1="322" y1="562" x2="878" y2="562" stroke="#ffffff" stroke-opacity="0.07"/>
+
+    <!-- SHORTCUT -->
+    <text x="322" y="600" font-size="13" font-weight="700" fill="#8f88b3" letter-spacing="1.5">SHORTCUT</text>
+    <text x="322" y="636" font-size="18" fill="#e9e7f5">Open Notesidian</text>
+    <rect x="712" y="618" width="120" height="36" rx="9" fill="#181427" stroke="#a78bfa" stroke-opacity="0.5" stroke-width="1.5"/>
+    <text x="772" y="642" font-size="18" font-weight="600" fill="#c4b5fd" text-anchor="middle">⌥⌘N</text>
+    <g stroke="#8f88b3" stroke-width="1.8" stroke-linecap="round"><path d="M849,629 l12,12 M861,629 l-12,12"/></g>
+
+    <line x1="322" y1="678" x2="878" y2="678" stroke="#ffffff" stroke-opacity="0.07"/>
+
+    <!-- WINDOW -->
+    <text x="322" y="716" font-size="13" font-weight="700" fill="#8f88b3" letter-spacing="1.5">WINDOW</text>
+    <text x="322" y="752" font-size="18" fill="#e9e7f5">Stay on top</text>
+    <rect x="812" y="736" width="48" height="27" rx="13.5" fill="#4a4560"/>
+    <circle cx="825.5" cy="749.5" r="10.5" fill="#c9c4e0"/>
+    <text x="322" y="800" font-size="18" fill="#e9e7f5">Launch at login</text>
+    <rect x="812" y="784" width="48" height="27" rx="13.5" fill="#7c3aed"/>
+    <circle cx="847" cy="797.5" r="10.5" fill="#ffffff"/>
+
+    <line x1="322" y1="846" x2="878" y2="846" stroke="#ffffff" stroke-opacity="0.07"/>
+
+    <!-- GENERAL -->
+    <text x="322" y="884" font-size="13" font-weight="700" fill="#8f88b3" letter-spacing="1.5">GENERAL</text>
+    <text x="322" y="920" font-size="18" fill="#e9e7f5">Vault</text>
+    <text x="322" y="948" font-size="15" fill="#8f88b3" font-family="Menlo, monospace">~/obsidian/Main</text>
+    <rect x="736" y="902" width="142" height="38" rx="9" fill="#2f2947" stroke="#ffffff" stroke-opacity="0.10"/>
+    <text x="807" y="927" font-size="16" fill="#d9d5ec" text-anchor="middle">Choose Vault…</text>
+
+    <line x1="322" y1="988" x2="878" y2="988" stroke="#ffffff" stroke-opacity="0.09"/>
+    <text x="322" y="1036" font-size="18" fill="#c4b5fd">About Notesidian</text>
+    <text x="878" y="1036" font-size="18" fill="#f0a3a3" text-anchor="end">Quit</text>
+  </g>
+</svg>
