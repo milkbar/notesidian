@@ -117,6 +117,7 @@ you'd like to see; it helps us prioritize.
 ## License & contact
 
 Notesidian is proprietary software. **© 2026 Milkbar Software.** All rights reserved.
+See the [Privacy Policy](PRIVACY.md) — short version: nothing is collected.
 
 Questions that don't fit an issue? [Open a discussion or issue](../../issues) and we'll get
 back to you.
