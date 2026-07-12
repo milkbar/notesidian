@@ -117,6 +117,8 @@ you'd like to see; it helps us prioritize.
 ## License & contact
 
 Notesidian is proprietary software. **© 2026 Milkbar Software.** All rights reserved.
+Its Markdown editor bundles open-source components under the MIT License — see
+[Third-Party Licenses](THIRD_PARTY_LICENSES.md) for the full attributions.
 See the [Privacy Policy](PRIVACY.md) — short version: nothing is collected.
 
 Questions that don't fit an issue? [Open a discussion or issue](../../issues) and we'll get
