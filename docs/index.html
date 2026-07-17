@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notesidian: your Obsidian notes, one keystroke away</title>
+<meta name="description" content="A fast, native macOS menu-bar companion for Obsidian. Hit a hotkey, reach the notes you use every day, and edit them in a real live-preview Markdown editor.">
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Notesidian: your Obsidian notes, one keystroke away">
+<meta property="og:description" content="A fast, native macOS menu-bar companion for Obsidian, with a live-preview Markdown editor and clickable tasks.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="screenshot-hero.png">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="icon.png" alt="">Notesidian</a>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="changelog.html">What's new</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="https://github.com/milkbar/notesidian">GitHub</a>
+      <a class="cta" href="https://apps.apple.com/us/app/notesidian/id6789721366">⬇ App Store</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="hero-badges">
+          <span class="pill">🍎 macOS 13+</span>
+          <span class="pill">🔮 Made for Obsidian</span>
+          <span class="pill">🔒 Private by design</span>
+        </div>
+        <h1>Your Obsidian notes, one keystroke away.</h1>
+        <p class="lede">A fast, native macOS menu-bar companion for Obsidian. Hit a hotkey to
+          reach the notes you use every day and edit them in a real live-preview Markdown editor,
+          without leaving the app you're in.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://apps.apple.com/us/app/notesidian/id6789721366">Download on the Mac App Store</a>
+          <a class="btn btn-ghost" href="changelog.html">✨ What's new in 1.1</a>
+        </div>
+        <p class="hero-note">On the Mac App Store now, for macOS 13 (Ventura) or later.</p>
+      </div>
+      <div class="hero-shot">
+        <img src="screenshot-hero.png" width="1000" height="1000"
+             alt="Notesidian floating over the desktop: a daily note with checkable tasks and six colored note tabs along the bottom.">
+      </div>
+    </div>
+  </section>
+
+  <!-- new in 1.1 -->
+  <section class="band" id="new">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">New in 1.1</span>
+        <h2>The editor caught up with Obsidian</h2>
+        <p>Version 1.1 adds the parts of Obsidian's editor people missed most: wikilinks, inline images, and optional Vim keys, all in the same floating panel.</p>
+      </div>
+      <div class="new-grid">
+        <div class="new-item"><div class="ico">🔗</div><div><h3>Wikilinks &amp; autocomplete</h3><p><code>[[Note]]</code> and <code>[[Note|alias]]</code> render as clickable links and open in Obsidian; typing <code>[[</code> suggests notes from your vault.</p></div></div>
+        <div class="new-item"><div class="ico">🖼️</div><div><h3>Inline images</h3><p><code>![[image.png]]</code> (with Obsidian's <code>|width</code>), <code>![alt](path)</code>, and remote images render right in the editor's preview.</p></div></div>
+        <div class="new-item"><div class="ico">🏷️</div><div><h3>Tags, callouts &amp; frontmatter</h3><p><code>#tags</code> become pills, <code>&gt; [!note]</code> callouts render as colored blocks, and YAML frontmatter dims into a tidy properties strip.</p></div></div>
+        <div class="new-item"><div class="ico">⌨️</div><div><h3>Vim mode</h3><p>Opt-in modal editing: normal, insert, and visual modes, with <code>:</code> commands and <code>/</code> search. Turn it on in Settings; it's off by default.</p></div></div>
+        <div class="new-item"><div class="ico">🔍</div><div><h3>Fuzzy note search</h3><p>The ⌘O picker matches by subsequence (type “prjx” to find <em>Projects/Project X</em>), ranks the closest first, and highlights the letters that matched.</p></div></div>
+        <div class="new-item"><div class="ico">✅</div><div><h3>Keyboard task toggle</h3><p>⌘. turns a line into a task, or checks and unchecks the one you're on, stamping the ✅ done-date just like clicking the box.</p></div></div>
+      </div>
+      <div class="changelog-link"><a class="btn btn-ghost" href="changelog.html">Read the full changelog →</a></div>
+    </div>
+  </section>
+
+  <!-- see it -->
+  <section id="see-it">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">See it in action</span>
+        <h2>Real Markdown, right where you work</h2>
+        <p>A live-preview editor that runs on CodeMirror 6, the same engine Obsidian uses, floating over whatever you're doing.</p>
+      </div>
+      <div class="shots">
+        <figure class="shot wide"><img src="shot-markdown.jpg" width="1600" height="1000" alt="The editor rendering a note: heading, quote, bold and inline code, a numbered agenda, and a checkbox."></figure>
+        <figure class="shot"><img src="shot-light-dark.jpg" width="1600" height="1000" alt="Notesidian in both light and dark appearance, following the system theme."></figure>
+        <figure class="shot"><img src="shot-quick-access.jpg" width="1600" height="1000" alt="Pressing the global hotkey to open the floating panel pointing at the menu-bar icon."></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- features -->
+  <section id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Features</span>
+        <h2>Everything you reach for, nothing you don't</h2>
+        <p>It's not a replacement for Obsidian. It reads and writes the exact same Markdown files in your vault, so everything shows up in Obsidian right away, and the other way around.</p>
+      </div>
+      <div class="features">
+        <div class="card"><div class="ico">⚡</div><h3>Instant access</h3><p>Click the menu-bar crystal or hit the global hotkey (default <strong>⌥⌘N</strong>, rebindable). It opens pointing at the icon and can float on top of every app, on every Space.</p></div>
+        <div class="card"><div class="ico">🗂️</div><h3>Six quick tabs</h3><p>Six fixed, color-coded tabs along the bottom, each bound to a real note. Switch with <strong>⌘1–⌘6</strong>; hold ⌘ to see the shortcuts light up.</p></div>
+        <div class="card"><div class="ico">📅</div><h3>Today's daily note</h3><p>Point any tab at “Today's Note” and it always opens the current day's note, following your Obsidian Daily Notes folder, format, and template.</p></div>
+        <div class="card"><div class="ico">✍️</div><h3>Real Markdown editor</h3><p>Built on <strong>CodeMirror 6</strong>. Headings, <strong>bold</strong>, <em>italic</em>, <code>code</code>, lists, quotes, and links render inline while your file stays plain Markdown. Toggle to source with <strong>⌘E</strong>.</p></div>
+        <div class="card"><div class="ico">✅</div><h3>Clickable tasks</h3><p><code>- [ ]</code> checkboxes render as real boxes; click to toggle done. Optionally stamp a <code>✅ YYYY-MM-DD</code> date, matching the Obsidian Tasks format.</p></div>
+        <div class="card"><div class="ico">🎨</div><h3>Icons &amp; color</h3><p>Give each tab an icon from 200+ SF Symbols or any emoji, searchable by name, so the right note is one glance away.</p></div>
+        <div class="card"><div class="ico">💾</div><h3>Autosave, always in sync</h3><p>Every keystroke autosaves to the <code>.md</code> file, so Obsidian sees it right away. Edits you make in Obsidian flow back into Notesidian live.</p></div>
+        <div class="card"><div class="ico">☁️</div><h3>Follows you across Macs</h3><p>Your tabs and settings sync via iCloud, per vault, so your setup is the same on every Mac. The vault folder stays private to each machine.</p></div>
+        <div class="card"><div class="ico">🌓</div><h3>Native &amp; tidy</h3><p>A real AppKit app: light and dark aware, launches at login, resizes to taste, with VoiceOver labels throughout. No Electron, no browser tab.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- settings shot -->
+  <section class="band">
+    <div class="wrap hero-grid">
+      <div class="hero-shot"><img src="screenshot-settings.png" width="1000" height="1000" alt="Notesidian's settings panel in dark mode: font picker, global-shortcut recorder, launch-at-login toggle, and vault chooser." style="border-radius:16px;border:1px solid var(--border);box-shadow:var(--shadow);"></div>
+      <div class="hero-copy">
+        <span class="eyebrow">One tidy panel</span>
+        <h2 style="font-size:clamp(1.6rem,3.4vw,2.1rem)">Set it up in a minute</h2>
+        <p class="lede" style="max-width:none">Pick a reading font, record a global shortcut, turn on launch-at-login, and choose your vault, all in one place. Light or dark, Notesidian follows your system theme.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- keyboard -->
+  <section id="keyboard">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Keyboard-first</span>
+        <h2>Built to keep your hands on the keys</h2>
+      </div>
+      <div class="shortcuts">
+        <div class="row"><div class="keys"><kbd>⌥⌘N</kbd></div><div class="desc">Open / close Notesidian (rebindable)</div></div>
+        <div class="row"><div class="keys"><kbd>⌘1</kbd> … <kbd>⌘6</kbd></div><div class="desc">Jump to a tab</div></div>
+        <div class="row"><div class="keys"><kbd>⌥⌘←</kbd> <kbd>⌥⌘→</kbd></div><div class="desc">Previous / next tab · <kbd>⌥⌘↑</kbd> <kbd>⌥⌘↓</kbd> step sibling notes</div></div>
+        <div class="row"><div class="keys"><kbd>⌘O</kbd></div><div class="desc">Change the current tab's note (fuzzy picker)</div></div>
+        <div class="row"><div class="keys"><kbd>⌘E</kbd></div><div class="desc">Toggle rendered / source view</div></div>
+        <div class="row"><div class="keys"><kbd>⌘.</kbd></div><div class="desc">Make a task, or toggle the checkbox on the current line</div></div>
+        <div class="row"><div class="keys"><kbd>⌘;</kbd></div><div class="desc">Insert today's date · <kbd>⇧⌘;</kbd> the time</div></div>
+        <div class="row"><div class="keys"><kbd>⌘F</kbd></div><div class="desc">Find in note · <kbd>⌘/</kbd> shows every shortcut</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- privacy -->
+  <section class="privacy-strip">
+    <div class="wrap">
+      <div class="lock">🔒</div>
+      <div>
+        <h2>Private by design</h2>
+        <p>Notesidian works entirely on your Mac. It reads and writes only the vault folder you point it at, makes <strong>no network connections</strong>, and uses no analytics or tracking. Your notes never leave your machine. <a href="privacy.html">Read the privacy policy →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- get it -->
+  <section class="get">
+    <div class="wrap">
+      <div class="box">
+        <h2>Get Notesidian</h2>
+        <p>Notesidian 1.1 is on the Mac App Store. Download it and open your vault.</p>
+        <div class="hero-cta" style="justify-content:center">
+          <a class="btn btn-primary" href="https://apps.apple.com/us/app/notesidian/id6789721366">Download on the Mac App Store</a>
+          <a class="btn btn-ghost" href="https://github.com/milkbar/notesidian/issues/new?template=feature_request.yml">💡 Request a feature</a>
+        </div>
+        <p class="req">Requires macOS 13 (Ventura) or later and <a href="https://obsidian.md">Obsidian</a> with a local vault.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="copy">Made with 🔮 by <strong>Milkbar Software</strong> · © 2026. All rights reserved.</div>
+    <nav class="foot-links">
+      <a href="changelog.html">Changelog</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="licenses.html">Licenses</a>
+      <a href="https://github.com/milkbar/notesidian">GitHub</a>
+      <a href="https://github.com/milkbar/notesidian/issues">Issues</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

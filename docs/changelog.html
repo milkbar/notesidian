@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Changelog · Notesidian</title>
+<meta name="description" content="What's new in Notesidian, version by version: the features, changes, and fixes in each release.">
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="icon.png" alt="">Notesidian</a>
+    <nav class="nav-links">
+      <a href="index.html#features">Features</a>
+      <a href="changelog.html">What's new</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="https://github.com/milkbar/notesidian">GitHub</a>
+      <a class="cta" href="https://apps.apple.com/us/app/notesidian/id6789721366">⬇ App Store</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">Changelog</span>
+      <h1>What's new in Notesidian</h1>
+      <p>Every notable change, version by version. Notesidian <strong>1.1 is now available on the
+        <a href="https://apps.apple.com/us/app/notesidian/id6789721366">Mac App Store</a></strong>.
+        The format follows <a href="https://keepachangelog.com/">Keep a Changelog</a>.</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <div class="wrap">
+
+      <!-- 1.1.0 -->
+      <div class="release-tag">
+        <span class="ver">1.1.0</span>
+        <span class="badge">On the App Store</span>
+        <span class="muted">Available now on the <a href="https://apps.apple.com/us/app/notesidian/id6789721366">Mac App Store</a></span>
+      </div>
+      <p class="muted">This release brings the editor closer to Obsidian's own: wikilinks, inline
+        images, tags, callouts, and Vim mode. It also makes edits much harder to lose.</p>
+
+      <div class="grouptag added"><span class="dot"></span> Added</div>
+      <ul>
+        <li><strong>Wikilink navigation.</strong> <code>[[Note]]</code> and <code>[[Note|alias]]</code> render as clickable links in preview; clicking one opens the note in <strong>Obsidian</strong>, creating it first if it doesn't exist. Editing a link now reveals its raw source while your cursor is inside it, so backspacing edits the text you see instead of the hidden brackets.</li>
+        <li><strong>Wikilink autocomplete.</strong> Typing <code>[[</code> suggests notes from your vault (filter as you type, ↑/↓ then ↵ or Tab to choose); the link and closing <code>]]</code> are inserted for you.</li>
+        <li><strong>Inline images.</strong> Embedded images render right in the editor's preview: <code>![[image.png]]</code> (with Obsidian's <code>|width</code> syntax), <code>![alt](path)</code>, and remote <code>![](https://…)</code>. Source mode still shows the raw embed.</li>
+        <li><strong>Markdown links render, too.</strong> <code>[text](url)</code> shows as an underlined, clickable link with the destination tucked away, and reveals its source when you edit it.</li>
+        <li><strong>Tags, callouts, and frontmatter render in preview.</strong> <code>#tag</code> shows as a subtle pill (click to open Obsidian's search); <code>&gt; [!note] …</code> callouts render as a colored block with an icon and title; a leading <code>--- … ---</code> YAML block is dimmed into a compact properties strip.</li>
+        <li><strong>Spell &amp; grammar check</strong> in the editor: the usual macOS underlines and right-click suggestions, plus an Edit ▸ Spelling and Grammar menu to toggle checking.</li>
+        <li><strong>Vim mode</strong> (opt-in): modal editing (normal / insert / visual, <code>:</code> commands, <code>/</code> search) via a toggle in Settings ▸ Editor. Off by default; the setting syncs like the others. Opening a line with <code>o</code>/<code>O</code> continues the list and indentation, just like Return.</li>
+        <li><strong>Toggle rendered / source with ⌘E</strong> (in addition to the header's <code>&lt;/&gt;</code> button).</li>
+        <li><strong>Advanced-formatting menu.</strong> A <code>⋯</code> button in the header toolbar inserts a <strong>code block</strong>, <strong>quote</strong>, or <strong>callout</strong> (<code>&gt; [!note]</code>).</li>
+        <li><strong>Make a task from the keyboard.</strong> ⌘. turns the current line into a task if it isn't one, or checks / unchecks the task you're on (or every task line in the selection), stamping the ✅ done-date just like clicking the box.</li>
+        <li><strong>Paste or drag in an image.</strong> Pasting or dropping an image saves it into your vault's attachment folder (honoring Obsidian's <code>attachmentFolderPath</code>) and embeds it as <code>![[image]]</code>.</li>
+        <li><strong>Paste a link.</strong> Paste a URL over selected text and it becomes a <code>[text](url)</code> Markdown link (single-line selections; http(s)/scheme URLs and <code>mailto:</code>).</li>
+        <li><strong>Auto-close <code>[[</code>.</strong> Typing the second <code>[</code> inserts the closing <code>]]</code> and parks the caret between them, ready to type or autocomplete a wikilink, scoped to <code>[[</code> only.</li>
+        <li><strong>Fuzzy note search.</strong> The ⌘O picker matches by subsequence (type “prjx” to find <em>Projects/Project X</em>), ranks the closest matches first, and <strong>bold-highlights</strong> the letters that matched.</li>
+        <li><strong>Proximity-ordered note picker.</strong> ⌘O lists notes grouped by closeness to the current note: siblings first, then peer folders, then everything else, with paths shown relative to the shared parent for nearby notes.</li>
+        <li><strong>Create notes from the picker.</strong> Typing a name that doesn't match shows a “Create note …” option that makes the note next to the current one and binds it to the tab.</li>
+        <li><strong>Keyboard navigation</strong> (all on ⌘⌥, so the editor keeps its own ⌘-arrow shortcuts): <strong>⌘⌥← / ⌘⌥→</strong> previous / next tab; <strong>⌘⌥↑ / ⌘⌥↓</strong> previous / next note in the same folder; <strong>⌘T</strong> jumps to the <em>Today's Note</em> tab.</li>
+        <li><strong>Open in Obsidian.</strong> Jump from a note straight to the full Obsidian app, from the ⋯ menu, or by ⌘-clicking or double-clicking the note title in the header. Capture here, go deep there.</li>
+        <li><strong>Insert date / time.</strong> ⌘; inserts today's date (in your vault's daily-note format) and ⇧⌘; inserts the current time, at the caret.</li>
+        <li><strong>Daily-note template.</strong> When a <em>Today</em> tab first opens a day that doesn't exist yet, the note is created from the Daily Notes plugin's template (if configured), with the core <code>{{title}}</code> / <code>{{date}}</code> / <code>{{time}}</code> (and <code>{{date:FORMAT}}</code>) tokens filled in. Templater <code>&lt;% … %&gt;</code> syntax is left untouched.</li>
+        <li><strong>Notes remember where you left off.</strong> Each note's caret and scroll position are restored when you reopen it, so the quick-open loop lands you exactly where you were. The first time you open a note, the caret starts at the end, ready to append.</li>
+        <li><strong>Find in note (⌘F).</strong> A single case-insensitive search box (Obsidian-style) with a match count and next / previous, styled to match the rest of the UI. It also seeds from the current selection and jumps to the first match.</li>
+        <li><strong>Keyboard-shortcut help (⌘/).</strong> A centered panel listing every in-panel shortcut.</li>
+        <li><strong>Per-vault tab configuration.</strong> Each Obsidian vault keeps its own set of tab assignments, synced via iCloud, so the same vault matches across your Macs no matter where it lives on disk, and a different vault starts with its own layout.</li>
+        <li><strong>Resizable width.</strong> The resize grip moved to the bottom-left and now adjusts both width and height, growing from the fixed top-right corner. Tabs and the header scale to stay readable; width persists and syncs like height.</li>
+        <li><strong>Note-name cue.</strong> When the loaded note changes, the header briefly shows the note's full name (middle-truncated) for about a second, then fades back to the toolbar.</li>
+        <li><strong>Tab-switch swipe.</strong> Switching tabs slides the content in from the direction of the move, for a bit more polish.</li>
+        <li><strong>Just start typing.</strong> On a tab with no note assigned (or no vault yet), the prompt is keyboard-actionable: press <strong>Return</strong> or <strong>Space</strong> to choose a note / vault without reaching for the mouse.</li>
+        <li><strong>Placeholder text.</strong> An empty note shows a dim “Start writing…” hint.</li>
+        <li><strong>Reduce Motion.</strong> With <em>Reduce motion</em> on, the panel zoom, tab-switch slide, and settings grow fall back to a quick crossfade (or nothing).</li>
+        <li><strong>Vault path in Settings.</strong> The current vault's path is shown under the <em>Choose…</em> button, with the home folder abbreviated to <code>~</code> and long paths middle-truncated.</li>
+        <li><strong>VoiceOver labels</strong> on the note tabs, formatting toolbar, settings controls, resize grip, and menu-bar item. The note picker and shortcut help open as centered, arrow-less panels.</li>
+      </ul>
+
+      <div class="grouptag changed"><span class="dot"></span> Changed</div>
+      <ul>
+        <li><strong>The selected tab is highlighted with an outline</strong> instead of a filled color, so every tab keeps its own tint and stays recognizable whether or not it's selected.</li>
+        <li><strong>Increase Contrast support.</strong> With <em>Increase contrast</em> on, the header band, tab pills, and settings recess firm up (a sibling to the Reduce Motion support). The empty-tab prompt also shows a focus ring when keyboard-focused.</li>
+        <li><strong>A tab's config menu opens with a right-click</strong> (or control-click) instead of a double-click.</li>
+      </ul>
+
+      <div class="grouptag fixed"><span class="dot"></span> Fixed</div>
+      <ul>
+        <li><strong>Save failures are no longer silent.</strong> If a write to the vault fails, the header shows an amber warning and the save retries automatically, clearing on the next success. Your text always stays in the editor.</li>
+        <li><strong>Sync conflicts don't lose the other side.</strong> If a note changes on disk while you have unsaved edits, the incoming version is preserved as a “… (sync conflict …).md” copy before your edits save.</li>
+        <li><strong>No lost edits when switching notes.</strong> Switching tabs, stepping siblings, picking a note, or hiding the panel now reads the editor's true current text and saves it before loading the next note.</li>
+        <li><strong>No lost edits on sleep or quit.</strong> The debounced autosave is flushed when the machine sleeps or the app quits, not only when the panel hides.</li>
+        <li><strong>Live sync no longer bounces you to the top.</strong> When a note changes on disk (Obsidian Sync, iCloud/Dropbox), the update is applied in place, keeping your caret and scroll position.</li>
+        <li><strong>Today tab follows midnight.</strong> Left open across midnight, a <em>Today</em> tab rolls over to the new day's note instead of showing yesterday's.</li>
+        <li><strong>Non-standard daily-note formats resolve correctly.</strong> Formats using single <code>D</code>, ordinal <code>Do</code>, weekday names, and bracketed literals now match Obsidian's file.</li>
+        <li><strong>Font size only accepts a number</strong> (9–48); non-numeric input is rejected instead of snapping to the minimum.</li>
+        <li><strong>Find no longer errors the editor.</strong> The custom ⌘F panel could dispatch a query mid-update; it now sets the query only on input.</li>
+        <li><strong>Missing note.</strong> A tab whose note was moved or deleted shows a clear “Note not found” state with a re-pick action, instead of an empty editor.</li>
+        <li><strong>Cloud-vault note loading.</strong> Notes in a cloud vault (OneDrive, iCloud, Dropbox) that are stored as online-only placeholders are downloaded before opening, so they load correctly.</li>
+      </ul>
+
+      <!-- 1.0 -->
+      <div class="release-tag">
+        <span class="ver">1.0</span>
+        <span class="badge gray">Initial release</span>
+      </div>
+      <p class="muted">The first release: a native macOS menu-bar companion for Obsidian. A floating
+        panel of quick note tabs with a live-preview Markdown editor, one global hotkey away.</p>
+
+      <div class="grouptag added"><span class="dot"></span> Added</div>
+      <ul>
+        <li><strong>Menu-bar panel.</strong> A global hotkey (default <strong>⌥⌘N</strong>) opens a floating panel that points at the menu-bar icon, with a stay-on-top option so it floats above other apps, on every Space.</li>
+        <li><strong>Six note tabs.</strong> Six fixed, color-coded tabs along the bottom, each bound to a real note in your vault and switchable with <strong>⌘1–⌘6</strong>.</li>
+        <li><strong>Live-preview Markdown editor.</strong> A CodeMirror&nbsp;6 editor with a formatting toolbar: headings, <strong>bold</strong>, <em>italic</em>, <code>code</code>, lists, quotes, and links render inline while the file stays plain Markdown.</li>
+        <li><strong>Clickable task checkboxes.</strong> <code>- [ ]</code> / <code>- [x]</code> render as real checkboxes; click one to toggle it done.</li>
+        <li><strong>Autosave &amp; live reload.</strong> Edits autosave back to the <code>.md</code> files, and changes made in Obsidian are picked up live in Notesidian.</li>
+        <li><strong>Per-tab icons.</strong> Give each tab an icon from SF Symbols or any emoji.</li>
+        <li><strong>Today's Note tabs.</strong> Point any tab at the current day's daily note.</li>
+        <li><strong>Inline settings panel.</strong> Font, global shortcut, launch-at-login, and stay-on-top, all in one place.</li>
+        <li><strong>Light &amp; dark.</strong> Follows your system appearance.</li>
+      </ul>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="copy">Made with 🔮 by <strong>Milkbar Software</strong> · © 2026. All rights reserved.</div>
+    <nav class="foot-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="licenses.html">Licenses</a>
+      <a href="https://github.com/milkbar/notesidian">GitHub</a>
+      <a href="https://github.com/milkbar/notesidian/issues">Issues</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
