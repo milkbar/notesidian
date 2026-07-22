@@ -46,6 +46,27 @@
   <div class="prose">
     <div class="wrap">
 
+      <!-- 1.2.0 -->
+      <div class="release-tag">
+        <span class="ver">1.2.0</span>
+        <span class="badge gray">In development</span>
+      </div>
+      <p class="muted">Rendered Markdown now gets out of your way as you edit, a single ⌘K popover
+        creates and edits every inline element, and fenced code blocks read as real blocks.</p>
+
+      <div class="grouptag added"><span class="dot"></span> Added</div>
+      <ul>
+        <li><strong>⌘K element editor.</strong> ⌘K opens a popover to create or edit the element under the caret — a <strong>web link</strong>, <strong>wiki link</strong>, <strong>callout</strong>, or <strong>code block</strong> — and pressing ⌘K again cycles through those types (starting at web link). <strong>Remove</strong> strips any element's markup while keeping its visible text.</li>
+        <li><strong>Code blocks render as a block.</strong> A fenced <code>```</code> block shows as a softly-boxed, monospace region with its language labeled, instead of the fences collapsing to blank lines.</li>
+        <li><strong>Rename notes.</strong> A <strong>Rename…</strong> item in a tab's right-click menu renames the current note (and can move it between folders), keeping the tab pointed at it.</li>
+      </ul>
+
+      <div class="grouptag changed"><span class="dot"></span> Changed</div>
+      <ul>
+        <li><strong>Rendered Markdown gets out of your way.</strong> In preview mode the hidden syntax now behaves as if it isn't there: the caret (arrows, Vim <code>h</code>/<code>l</code>, clicks) steps over it, and Backspace/Delete edit the visible text — emptying an element's text removes the whole thing, so you never leave a stray <code>**</code> or <code>]]</code>. This spans bold, italic, code, strikethrough, headings, quotes, links, wikilinks, callouts, and code blocks. Wikilinks and embeds no longer reveal their raw source; edit a wikilink's target with ⌘K.</li>
+        <li><strong>Today's Note is a fixed tab.</strong> The sixth tab is permanently the <em>Today's Note</em> tab (so ⌘6 and ⌘T match) and can't be dragged out of place.</li>
+      </ul>
+
       <!-- 1.1.0 -->
       <div class="release-tag">
         <span class="ver">1.1.0</span>
