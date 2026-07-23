@@ -57,14 +57,25 @@
       <div class="grouptag added"><span class="dot"></span> Added</div>
       <ul>
         <li><strong>⌘K element editor.</strong> ⌘K opens a popover to create or edit the element under the caret — a <strong>web link</strong>, <strong>wiki link</strong>, <strong>callout</strong>, or <strong>code block</strong> — and pressing ⌘K again cycles through those types (starting at web link). <strong>Remove</strong> strips any element's markup while keeping its visible text.</li>
-        <li><strong>Code blocks render as a block.</strong> A fenced <code>```</code> block shows as a softly-boxed, monospace region with its language labeled, instead of the fences collapsing to blank lines.</li>
+        <li><strong>Code blocks render as a block, with syntax highlighting.</strong> A fenced <code>```</code> block shows as a softly-boxed, monospace region with its language labeled and colored, instead of the fences collapsing to blank lines. Covers the common languages (JavaScript/TypeScript, Python, Swift, Go, Rust, Java, C/C++/C#, Ruby, PHP, Kotlin, HTML/CSS/SCSS, JSON/YAML/XML, SQL, Shell, TOML, Dockerfile); anything else still renders, just without color.</li>
         <li><strong>Rename notes.</strong> A <strong>Rename…</strong> item in a tab's right-click menu renames the current note (and can move it between folders), keeping the tab pointed at it.</li>
       </ul>
 
       <div class="grouptag changed"><span class="dot"></span> Changed</div>
       <ul>
-        <li><strong>Rendered Markdown gets out of your way.</strong> In preview mode the hidden syntax now behaves as if it isn't there: the caret (arrows, Vim <code>h</code>/<code>l</code>, clicks) steps over it, and Backspace/Delete edit the visible text — emptying an element's text removes the whole thing, so you never leave a stray <code>**</code> or <code>]]</code>. This spans bold, italic, code, strikethrough, headings, quotes, links, wikilinks, callouts, and code blocks. Wikilinks and embeds no longer reveal their raw source; edit a wikilink's target with ⌘K.</li>
+        <li><strong>Rendered Markdown gets out of your way.</strong> In preview mode the hidden syntax now behaves as if it isn't there: the caret (arrows, Vim motions, clicks, Home/End, ⌘-arrows, Option-arrows) steps over it, and Backspace/Delete edit the visible text — emptying an element's text removes the whole thing, so you never leave a stray <code>**</code> or <code>]]</code>. This spans bold, italic, code, strikethrough, headings, quotes, links, wikilinks, callouts, and code blocks. Wikilinks and embeds no longer reveal their raw source; edit a wikilink's target with ⌘K.</li>
+        <li><strong>List, heading, and quote markers can't be typed into by accident.</strong> The caret can no longer land somewhere — via Home, a click, or Vim's <code>I</code>/<code>^</code> — that would break a bullet, numbered item, task, heading, or quote if you started typing there.</li>
         <li><strong>Today's Note is a fixed tab.</strong> The sixth tab is permanently the <em>Today's Note</em> tab (so ⌘6 and ⌘T match) and can't be dragged out of place.</li>
+        <li>Smaller download — trimming code-block language support to the common set (above) cut the app's size by several hundred KB.</li>
+      </ul>
+
+      <div class="grouptag fixed"><span class="dot"></span> Fixed</div>
+      <ul>
+        <li><strong>Undo can no longer erase a whole note.</strong> Undoing an edit made shortly after opening a note used to undo the note being loaded too, silently wiping it back to empty; now only your edit is undone.</li>
+        <li><strong>Copying, cutting, or dragging text never includes hidden Markdown.</strong> If a selection happened to extend into a link's hidden URL (or similar), the hidden characters used to tag along to the clipboard, the search box, or wherever you dropped the text — now only what you actually see selected goes with it.</li>
+        <li><strong>Dragging an image onto a note now embeds it.</strong> It previously did nothing.</li>
+        <li><strong>A missing or moved image's placeholder renders reliably</strong> instead of occasionally losing track of its spot in the note after the image failed to load.</li>
+        <li><strong>List-related formatting-toolbar buttons no longer corrupt markers.</strong> Switching a line between bullet, numbered, and checkbox now converts it cleanly instead of stacking a second marker in front or leaving an invalid one behind.</li>
       </ul>
 
       <!-- 1.1.0 -->
