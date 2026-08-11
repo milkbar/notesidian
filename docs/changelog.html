@@ -38,7 +38,7 @@
     <div class="wrap">
       <span class="eyebrow">Changelog</span>
       <h1>What's new in Notesidian</h1>
-      <p>Every notable change, version by version. Notesidian <strong>1.1 is now available on the
+      <p>Every notable change, version by version. Notesidian <strong>1.2.1 is now available on the
         <a href="https://apps.apple.com/us/app/notesidian/id6789721366">Mac App Store</a></strong>.
         The format follows <a href="https://keepachangelog.com/">Keep a Changelog</a>.</p>
     </div>
@@ -47,10 +47,11 @@
   <div class="prose">
     <div class="wrap">
 
-      <!-- 1.2.0 -->
+      <!-- 1.2.1 -->
       <div class="release-tag">
-        <span class="ver">1.2.0</span>
-        <span class="badge gray">In development</span>
+        <span class="ver">1.2.1</span>
+        <span class="badge">On the App Store</span>
+        <span class="muted">Available now on the <a href="https://apps.apple.com/us/app/notesidian/id6789721366">Mac App Store</a></span>
       </div>
       <p class="muted">Rendered Markdown now gets out of your way as you edit, a single ⌘K popover
         creates and edits every inline element, and fenced code blocks read as real blocks.</p>
@@ -60,6 +61,8 @@
         <li><strong>⌘K element editor.</strong> ⌘K opens a popover to create or edit the element under the caret — a <strong>web link</strong>, <strong>wiki link</strong>, <strong>callout</strong>, or <strong>code block</strong> — and pressing ⌘K again cycles through those types (starting at web link). <strong>Remove</strong> strips any element's markup while keeping its visible text.</li>
         <li><strong>Code blocks render as a block, with syntax highlighting.</strong> A fenced <code>```</code> block shows as a softly-boxed, monospace region with its language labeled and colored, instead of the fences collapsing to blank lines. Covers the common languages (JavaScript/TypeScript, Python, Swift, Go, Rust, Java, C/C++/C#, Ruby, PHP, Kotlin, HTML/CSS/SCSS, JSON/YAML/XML, SQL, Shell, TOML, Dockerfile); anything else still renders, just without color.</li>
         <li><strong>Rename notes.</strong> A <strong>Rename…</strong> item in a tab's right-click menu renames the current note (and can move it between folders), keeping the tab pointed at it.</li>
+        <li><strong>⌘⌥↑/↓ browse adjacent daily notes from the Today tab.</strong> Previously a no-op there, it now steps to the previous/next day's note, the same way it steps between sibling notes on any other tab. ⌘T always snaps the Today tab back to the real current day, however far you've browsed.</li>
+        <li><strong>Copy Settings From, in a tab's right-click menu.</strong> Copies another tab's note and icon onto the current tab (not its color, which stays independent of what note is shown). Lists every other tab, including the Today tab as a source — but the Today tab can't be a destination, since its note binding is fixed to the current day.</li>
       </ul>
 
       <div class="grouptag changed"><span class="dot"></span> Changed</div>
@@ -87,7 +90,9 @@
         <li><strong>An empty code block can now be deleted.</strong> Backspace/Delete on its (now-empty) content used to do nothing, since the same protection that stops a delete from merging into a fence line left an emptied block permanently stuck; it can now be removed like any other emptied element.</li>
         <li><strong>Vim's block cursor no longer flashes hidden Markdown into view, and exiting a construct leftward with <code>h</code> takes one keystroke, not two.</strong> Reaching the true end of a line, or exiting a link, wikilink, or bold/italic run leftward, used to leave Vim's cursor sitting on the hidden delimiter itself (a link's <code>[</code>, a wikilink's <code>]]</code>, …) — Vim's own cursor rendering reads the raw character under it and would flash it into view, and since that's not a real position, it took a pointless extra <code>h</code> to actually get past it. The cursor now lands directly on real content.</li>
         <li><strong>An empty code block can now be deleted from Vim mode.</strong> The empty-block removal above only ran for the literal Backspace/Delete keys; Vim's other ways to delete text (<code>x</code>, <code>dd</code>, visual-mode <code>d</code>, …) dispatch their own edits directly and bypassed it, leaving an emptied block permanently stuck. Works the same way no matter which command emptied it now — and real Vim's Normal-mode Backspace is still a leftward motion, not a delete, matching real Vim.</li>
-        <li><strong>A long note path in the note-search picker no longer wraps and overlaps the row below it</strong> — it truncates to one line, like every other row.</li>
+        <li><strong>A long note path in the note-search picker wraps onto multiple lines</strong> instead of being cut off with an ellipsis, so the full path — including the folder names a search matched on — stays visible.</li>
+        <li><strong>Vim's <code>O</code> keeps the current line's own indent</strong>, instead of sometimes picking up the line above's. <code>O</code> continues from the line above by design (matching how <code>o</code> continues from the current line), which is normally the same marker — but at a list-nesting boundary (a less-indented line sitting right below a more-indented one) it used to continue the wrong, deeper indent.</li>
+        <li><strong>Erasing a bullet, numbered item, task, heading, or quote is clean.</strong> Backspacing an already-empty one used to chew through its marker one raw character at a time — a checkbox's <code>- [ ] </code> could leave a stray space, bracket, or partial marker behind instead of a plain blank line. Backspace now drops the whole marker in one step once there's nothing left after it, the same way emptying a link or code block already dropped the whole thing; covered for Vim's other delete commands (<code>x</code>, visual-mode <code>d</code>, …) too, not just the literal Backspace key.</li>
       </ul>
 
       <!-- 1.1.0 -->

@@ -9,4 +9,4 @@ Static GitHub Pages site for Notesidian, served from `docs/` (no build step). Th
 
 ## Conventions
 - Commit straight to `main`. Never add a `Co-Authored-By` line. Don't push unless asked.
-- Current state: 1.1 is on the App Store; 1.2.0 is in development.
+- Current state: 1.2.1 is on the App Store. No release currently in development.
