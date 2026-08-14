@@ -38,7 +38,7 @@
     <div class="wrap">
       <span class="eyebrow">Changelog</span>
       <h1>What's new in Notesidian</h1>
-      <p>Every notable change, version by version. Notesidian <strong>1.2.1 is now available on the
+      <p>Every notable change, version by version. Notesidian <strong>1.2.2 is now available on the
         <a href="https://apps.apple.com/us/app/notesidian/id6789721366">Mac App Store</a></strong>.
         The format follows <a href="https://keepachangelog.com/">Keep a Changelog</a>.</p>
     </div>
@@ -46,6 +46,24 @@
 
   <div class="prose">
     <div class="wrap">
+
+      <!-- 1.2.2 -->
+      <div class="release-tag">
+        <span class="ver">1.2.2</span>
+        <span class="badge">On the App Store</span>
+        <span class="muted">Available now on the <a href="https://apps.apple.com/us/app/notesidian/id6789721366">Mac App Store</a></span>
+      </div>
+      <p class="muted">A focused bug-fix release: a rare silent crash, disappearing links, formatting-shortcut markers, and a Vim delete are all fixed.</p>
+
+      <div class="grouptag fixed"><span class="dot"></span> Fixed</div>
+      <ul>
+        <li><strong>Fixed a rare, silent crash when a setting synced in from iCloud</strong> (say, from another Mac). Handling that sync could land on a background thread and try to rebuild the tab bar's layout from there, which AppKit doesn't allow — the app would quit instantly with no dialog or error. That handling now always runs on the main thread.</li>
+        <li><strong>Typed URLs render as links instead of disappearing.</strong> Both a bare <code>https://…</code> and one wrapped in <code>&lt;https://…&gt;</code> used to vanish entirely in the rendered view; both now render and are ⌘-clickable.</li>
+        <li><strong>The Today tab starts fresh after midnight</strong>, even if you'd browsed to an adjacent day with ⌘⌥↑/↓ before the day rolled over — that browse used to pin the tab to whatever note it landed on indefinitely, until an explicit ⌘T.</li>
+        <li><strong>Bold/italic/underline/strikethrough with nothing selected no longer insert bare <code>**</code>/<code>~~</code>/etc into the note.</strong> The next character you type is what gets wrapped, and nothing is left behind if you change your mind and click away. Hitting the same shortcut again stops formatting from there on without un-formatting what you already typed — select the text first if you want to remove formatting from it.</li>
+        <li><strong>Vim's <code>dd</code> (and other whole-line deletes) on a bulleted, numbered, task, heading, or quote line now removes the entire line</strong>, instead of leaving an empty one behind.</li>
+        <li><strong>Reduced a rare cursor-rendering glitch in Vim mode</strong>, where losing and regaining window focus could leave a stray, cursor-shaped artifact on screen.</li>
+      </ul>
 
       <!-- 1.2.1 -->
       <div class="release-tag">
