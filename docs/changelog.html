@@ -38,7 +38,7 @@
     <div class="wrap">
       <span class="eyebrow">Changelog</span>
       <h1>What's new in Notesidian</h1>
-      <p>Every notable change, version by version. Notesidian <strong>1.2.2 is now available on the
+      <p>Every notable change, version by version. Notesidian <strong>1.3.0 is now available on the
         <a href="https://apps.apple.com/us/app/notesidian/id6789721366">Mac App Store</a></strong>.
         The format follows <a href="https://keepachangelog.com/">Keep a Changelog</a>.</p>
     </div>
@@ -46,6 +46,26 @@
 
   <div class="prose">
     <div class="wrap">
+
+      <!-- 1.3.0 -->
+      <div class="release-tag">
+        <span class="ver">1.3.0</span>
+        <span class="badge">On the App Store</span>
+        <span class="muted">Available now on the <a href="https://apps.apple.com/us/app/notesidian/id6789721366">Mac App Store</a></span>
+      </div>
+      <p class="muted">Fix a misspelling without leaving the keyboard in Vim mode, keep an eye on your mode and word count in a new status bar, and a handful of list-editing fixes.</p>
+
+      <div class="grouptag added"><span class="dot"></span> Added</div>
+      <ul>
+        <li><strong>Vim-mode spelling correction.</strong> <code>]s</code>/<code>[s</code> jump to the next/previous misspelled word, and <code>z=</code> opens a small popover of replacement suggestions right at the word — arrow keys or <code>j</code>/<code>k</code> to move, a bare digit <code>1</code>–<code>9</code> to pick one instantly, <code>l</code> for “Learn Spelling,” Return to accept the highlighted one, Escape to cancel.</li>
+        <li><strong>A status bar above the tab bar</strong>, always visible: your Vim mode (blank in Normal mode, matching real Vim), the spelling hotkeys as a hint whenever the caret is on a misspelled word, the note's word count (or the selection's, while one's active), and a cursor ruler — line, column, and percent through the note.</li>
+      </ul>
+
+      <div class="grouptag fixed"><span class="dot"></span> Fixed</div>
+      <ul>
+        <li><strong>Erasing a list, task, heading, or quote item's last character of content no longer removes the whole item.</strong> Backspace, Delete, Vim's <code>D</code>, and a character-wise Vim visual delete now just empty the content and leave the marker in place — a further Backspace on the now-empty line is what removes it, matching how emptying it any other way already behaved.</li>
+        <li><strong>Vim's visual-LINE (<code>V</code>) yank/cut now keeps a marked line's bullet, number, or checkbox when pasted</strong>, instead of pasting back just the bare text.</li>
+      </ul>
 
       <!-- 1.2.2 -->
       <div class="release-tag">
